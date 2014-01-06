@@ -22,7 +22,8 @@
  
 +#ifndef __RPCNDR_H__
  #ifndef HAVE_BOOLEAN
- typedef int boolean;
+-typedef int boolean;
++typedef unsigned char boolean;
  #endif
 +#endif
  #ifndef FALSE			/* in case these macros already exist */
