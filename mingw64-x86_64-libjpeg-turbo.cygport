@@ -2,8 +2,8 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libjpeg-turbo"
-VERSION=1.3.0
-RELEASE=2
+VERSION=1.3.1
+RELEASE=1
 CATEGORY="Devel"
 SUMMARY="JPEG library with SIMD acceleration for Win64 toolchain"
 DESCRIPTION="This package does NOT contain cygwin binaries.  Instead, it
