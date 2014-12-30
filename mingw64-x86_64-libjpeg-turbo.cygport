@@ -3,7 +3,7 @@ inherit cross
 
 NAME="mingw64-x86_64-libjpeg-turbo"
 VERSION=1.3.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Devel"
 SUMMARY="JPEG library with SIMD acceleration for Win64 toolchain"
 DESCRIPTION="This package does NOT contain cygwin binaries.  Instead, it
@@ -13,7 +13,13 @@ mingw64-x86_64-gcc cross compiler, and installs into the
 HOMEPAGE="http://libjpeg-turbo.virtualgl.org/"
 SRC_URI="mirror://sourceforge/libjpeg-turbo/libjpeg-turbo-${VERSION}.tar.gz"
 SRC_DIR="libjpeg-turbo-${VERSION}"
-PATCH_URI="1.2.1-w32api-conflicts.patch"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/libjpeg-turbo.git/plain/libjpeg-turbo12-noinst.patch?h=f21
+	http://pkgs.fedoraproject.org/cgit/libjpeg-turbo.git/plain/libjpeg-turbo-header-files.patch
+	http://pkgs.fedoraproject.org/cgit/mingw-libjpeg-turbo.git/plain/libjpeg-turbo-commit-1365.patch
+	http://pkgs.fedoraproject.org/cgit/mingw-libjpeg-turbo.git/plain/libjpeg-turbo-commit-1367.patch
+	1.2.1-w32api-conflicts.patch
+"
 
 CYGCONF_ARGS="--without-java --with-jpeg8"
 MAKEOPTS+=" -j1 bin_PROGRAMS= dist_doc_DATA= dist_example_DATA= dist_man1_MANS= "
