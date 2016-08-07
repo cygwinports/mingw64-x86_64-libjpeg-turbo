@@ -1,18 +1,5 @@
 --- origsrc/libjpeg-turbo-1.4.2/jmorecfg.h	2015-09-21 13:48:32.000000000 -0500
 +++ src/libjpeg-turbo-1.4.2/jmorecfg.h	2015-10-08 03:26:16.238523900 -0500
-@@ -143,8 +143,12 @@ typedef unsigned int UINT16;
- /* INT16 must hold at least the values -32768..32767. */
- 
- #ifndef XMD_H                   /* X11/xmd.h correctly defines INT16 */
-+#ifndef _BASETSD_H_		/* Microsoft defines it in basetsd.h */
-+#ifndef _BASETSD_H		/* MinGW is slightly different */
- typedef short INT16;
- #endif
-+#endif
-+#endif
- 
- /* INT32 must hold at least signed 32-bit values. */
- 
 @@ -216,7 +220,9 @@ typedef unsigned int JDIMENSION;
   */
  

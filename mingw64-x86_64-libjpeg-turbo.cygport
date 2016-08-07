@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libjpeg-turbo"
-VERSION=1.4.2
+VERSION=1.5.0
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="JPEG library with SIMD acceleration for Win64 toolchain"
@@ -21,5 +21,5 @@ PATCH_URI="
 
 CYGCONF_ARGS="--without-java --with-jpeg8"
 MAKEOPTS+=" -j1 bin_PROGRAMS= dist_doc_DATA= dist_example_DATA= dist_man1_MANS= "
-DOCS="README-turbo.txt"
+DOCS="README.ijg"
 KEEP_LA_FILES="none"
